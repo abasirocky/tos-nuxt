@@ -1,0 +1,25 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev -p 9090",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "daisyui": "^3.7.3",
+    "nuxt": "^3.7.1"
+  },
+  "dependencies": {
+    "@tanstack/vue-query": "^4.35.3",
+    "@types/uuid": "^9.0.3",
+    "konva": "^9.2.0",
+    "primevue": "^3.34.1",
+    "uuid": "^9.0.0",
+    "vue-konva": "^3.0.2"
+  }
+}

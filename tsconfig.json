@@ -1,0 +1,9 @@
+{
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "compilerOptions": {
+    "noImplicitAny": false,
+  },
+  "extends": "./.nuxt/tsconfig.json",
+  "strict": false,
+  "allowJs": true,
+}
