@@ -8,8 +8,17 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/main.css'],
   modules: [
-    ['@nuxtjs/tailwindcss'],
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
+    '@invictus.codes/nuxt-vuetify'
   ],
+  pinia: {
+    autoImports: [
+      // automatically imports `defineStore`
+      'defineStore', // import { defineStore } from 'pinia'
+      ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
+    ],
+  },
   devtools: { enabled: true },
 })
 

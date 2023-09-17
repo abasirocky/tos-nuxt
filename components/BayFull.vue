@@ -16,6 +16,6 @@ function toggleMirror() {
 
 </script>
 <template>
-    <bay-on-deck/>
+    <bay-on-deck mirrorMode />
 </template>
 

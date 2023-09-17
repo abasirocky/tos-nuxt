@@ -133,7 +133,7 @@ function handleClick(containerIndex: number, container: any) {
 <template>
   <div id="container">
     <LazyClientOnly>
-      <v-stage class="hatch-grid" :config="configKonva">
+      <v-stage class="hatch-grid" :config="configKonva()">
         <v-layer>
           <!-- X Axis labels -->
           <v-text v-for="(value, index) in getXLabels()" :key="`x-label-${index}`"

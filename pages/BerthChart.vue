@@ -1,69 +1,97 @@
 <template>
-    <main>
-        <div class="py-0 navbar min-h-[3rem] bg-base-100 border-y-2">
-            <div class="navbar-start">
-                <div class="dropdown">
-                    <label tabindex="0" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h8m-8 6h16" />
-                        </svg>
-                    </label>
-                    <ul tabindex="0"
-                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <a>Parent</a>
-                            <ul class="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
-                    </ul>
-                </div>
-                <div class="flex items-center justify-center divide-x">
-                    <div class="px-3 py-0 text-xl normal-case">Berth View</div>
-                    <div class="px-3 py-0 text-gray-400 normamdl-case">Port Name</div>
-                </div>
-            </div>
 
-            <div class="gap-1 navbar-end">
-
-                <a class="text-white btn btn-info btn-sm bg-sky-400">
-                    <IconsRefreshIcon />
-                    Refresh
-                </a>
+  <v-layout class="" >
+    <v-app-bar
+      color="blue-lighten-1"
+      class="px-2"
+    >
 
 
-                <div class="text-white dropdown">
-                    <label tabindex="0" class="m-1 text-white btn btn-info btn-sm bg-sky-400">
-                        <IconsMenuIcon /> Current Plan
-                    </label>
-                    <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-sky-400 rounded-box w-52">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
-                    </ul>
-                </div>
+      <div class="flex gap-2">
+        <v-app-bar-title>
+          Berth Monitoring
+        </v-app-bar-title>
+        <v-divider class="h-full" vertical :thickness="2"></v-divider>
+          Port Bandar Abbas
+      </div>
+
+      <v-spacer></v-spacer>
+
+
+      <div class="flex gap-2">
+
+        <v-btn class="flex items-center justify-center" :variant="'outlined'" >
+          <v-icon>mdi-refresh</v-icon>
+          Refresh
+        </v-btn>
+
+        <v-menu
+      open-on-hover
+    >
+      <template v-slot:activator="{ props }">
+        <v-btn
+          color=""
+          variant="outlined"
+          v-bind="props"
+        >
+        <v-icon>mdi-menu</v-icon>
+          Current Plan
+        </v-btn>
+      </template>
+
+      <v-list>
+        <v-list-item
+          v-for="(item, index) in plans"
+          :key="index"
+        >
+          <v-list-item-title>
+            <v-btn class="w-full" variant="flat">
+                {{ item.title }}
+            </v-btn>
+        </v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
 
 
 
-                <a class="text-white btn btn-info btn-sm bg-sky-400">
-                    <IconsFilterIcon />
-                    Filter
-                </a>
+        <v-btn class="flex items-center justify-center" :variant="'outlined'" >
+          <v-icon>mdi-filter</v-icon>
+          Filter
+        </v-btn>
+        
+        <v-btn class="flex items-center justify-center" :variant="'outlined'" >
+          <v-icon>mdi-content-save</v-icon>
+          Save
+        </v-btn>
+        
 
-                <a class="text-white btn btn-info btn-sm bg-sky-400">
-                    <IconsSaveIcon />
+      </div>
+    </v-app-bar>
 
-                    Save
-                </a>
-            </div>
-        </div>
-    </main>
+    <v-main class="p-0 w-100vh">
+      <v-container fluid  class="p-0 ">
+        <v-row>
+          
+          
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-layout>
+
+
+
+    
+    
 </template>
   
 <script setup>
+
+const plans = ref([
+        { title: 'Click Me' },
+        { title: 'Click Me' },
+        { title: 'Click Me' },
+        { title: 'Click Me 2' },
+      ])
 
 </script>

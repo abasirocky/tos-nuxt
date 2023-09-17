@@ -2,7 +2,7 @@
 
 </script>
 <template>
-    <a class="text-white btn bg-sky-300">
+    <a class="text-white rounded-none btn bg-sky-300">
         Filter
     </a>
 </template>
