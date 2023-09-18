@@ -61,6 +61,6 @@
   </main>
 </template>
 
-<script setup>
-
+<script >
+console.log(process.env.BASE_URL, 'BB')
 </script>

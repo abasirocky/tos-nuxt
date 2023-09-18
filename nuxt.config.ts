@@ -3,14 +3,16 @@ export default defineNuxtConfig({
   plugins: [
     { src: '~/plugins/konvavue.ts', mode: 'client' }
   ],
-  env: {
-    BASE_URL: process.env.NUXT_BASE_URL || 'http://localhost:5145/api/v1',
+  runtimeConfig: {
+    public: {
+      BASE_URL: process.env.NUXT_BASE_URL || 'http://localhost:5145/api/v1',
+    }
   },
   css: ['~/assets/css/main.css'],
   modules: [
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
-    '@invictus.codes/nuxt-vuetify'
+    '@invictus.codes/nuxt-vuetify',
   ],
   pinia: {
     autoImports: [

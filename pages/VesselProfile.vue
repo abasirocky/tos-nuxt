@@ -1,3 +1,7 @@
+<script>
+  console.log('hi', process.env.BASE_URL);
+</script>
+
 <template>
     <v-layout class="" >
       <v-app-bar

@@ -21,10 +21,12 @@
     "@types/uuid": "^9.0.3",
     "canvas": "^2.11.2",
     "konva": "^9.2.0",
+    "lodash": "^4.17.21",
     "pinia": "^2.1.6",
     "primevue": "^3.34.1",
     "uuid": "^9.0.1",
     "uuidv4": "^6.2.13",
-    "vue-konva": "^3.0.2"
+    "vue-konva": "^3.0.2",
+    "vue3-toastify": "^0.1.12"
   }
 }
